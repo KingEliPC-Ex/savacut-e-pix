@@ -1,12 +1,11 @@
 {
-"name": "SavaPage Server",
-"build": {
-"dockerfile": "Dockerfile"
-},
-"runArgs": [
-"--privileged"
-],
-"forwardPorts": [8631, 631],
-"postCreateCommand": "sudo service cups start && sudo /opt/savapage/sbin/savapage start",
-"remoteUser": "vscode"
+  "name": "Debian Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "remoteUser": "vscode",
+  "overrideCommand": true,
+  "runArgs": [
+    "--privileged"
+  ]
 }
